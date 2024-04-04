@@ -3,14 +3,14 @@ export const types = {
     {
       'offense':
         {
-          'super-effective': new Set(['']),
+          'super-effective': new Set(),
           'not-very-effective': new Set(['rock', 'steel']),
           'no-effect': new Set(['ghost'])
         },
       'defense':
         {
           'weak-to': new Set(['fighting']),
-          'resists': new Set(['']),
+          'resists': new Set(),
           'immune-to': new Set(['ghost'])
         }
     },
@@ -20,13 +20,13 @@ export const types = {
         {
           'super-effective': new Set(['grass', 'ice', 'bug', 'steel']),
           'not-very-effective': new Set(['fire', 'water', 'rock', 'dragon']),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
-          'weak-to': new Set('water', 'ground', 'rock'),
+          'weak-to': new Set(['water', 'ground', 'rock']),
           'resists': new Set(['fire', 'grass', 'ice', 'bug', 'steel', 'fairy']),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'water':
@@ -35,13 +35,13 @@ export const types = {
         {
           'super-effective': new Set(["fire", "ground", "rock"]),
           'not-very-effective': new Set(["water", "grass", "dragon"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
           'weak-to': new Set(["electric", "grass"]),
           'resists': new Set(["fire", "water", "ice", "steel"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'electric':
@@ -56,7 +56,7 @@ export const types = {
         {
           'weak-to': new Set(["ground"]),
           'resists': new Set(["electric", "flying", "steel"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'grass':
@@ -65,13 +65,13 @@ export const types = {
         {
           'super-effective': new Set(["water", "ground", "rock"]),
           'not-very-effective': new Set(["fire", "grass", "poison", "flying", "bug", "dragon", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
           'weak-to': new Set(["fire", "ice", "poison", "flying", "bug"]),
           'resists': new Set(["water", "electric", "grass", "ground"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'ice':
@@ -80,13 +80,13 @@ export const types = {
         {
           'super-effective': new Set(["grass", "ground", "flying", "dragon"]),
           'not-very-effective': new Set(["fire", "water", "ice", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
           'weak-to': new Set(["fire", "fighting", "rock", "steel"]),
           'resists': new Set(["ice"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'fighting':
@@ -101,7 +101,7 @@ export const types = {
         {
           'weak-to': new Set(["flying", "psychic", "fairy"]),
           'resists': new Set(["bug", "rock", "dark"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'poison':
@@ -116,7 +116,7 @@ export const types = {
         {
           'weak-to': new Set(["ground", "psychic"]),
           'resists': new Set(["grass", "fighting", "poison", "bug", "fairy"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'ground':
@@ -140,7 +140,7 @@ export const types = {
         {
           'super-effective': new Set(["grass", "fighting", "bug"]),
           'not-very-effective': new Set(["electric", "rock", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
@@ -161,7 +161,7 @@ export const types = {
         {
           'weak-to': new Set(["bug", "ghost", "dark"]),
           'resists': new Set(["fighting", "psychic"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'bug':
@@ -170,13 +170,13 @@ export const types = {
         {
           'super-effective': new Set(["grass", "psychic", "dark"]),
           'not-very-effective': new Set(["fire", "fighting", "poison", "flying", "ghost", "steel", "fairy"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
           'weak-to': new Set(["fire", "flying", "rock"]),
           'resists': new Set(["grass", "fighting", "ground"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'rock':
@@ -185,13 +185,13 @@ export const types = {
         {
           'super-effective': new Set(["fire", "ice", "flying", "bug"]),
           'not-very-effective': new Set(["fighting", "ground", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
           'weak-to': new Set(["water", "grass", "fighting", "ground", "steel"]),
           'resists': new Set(["normal", "fire", "poison", "flying"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'ghost':
@@ -221,7 +221,7 @@ export const types = {
         {
           'weak-to': new Set(["ice", "dragon", "fairy"]),
           'resists': new Set(["fire", "water", "electric", "grass"]),
-          'immune-to': new Set([''])
+          'immune-to': new Set()
         }
     },
   'dark':
@@ -230,7 +230,7 @@ export const types = {
         {
           'super-effective': new Set(["psychic", "ghost"]),
           'not-very-effective': new Set(["fighting", "dark", "fairy"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
@@ -245,7 +245,7 @@ export const types = {
         {
           'super-effective': new Set(["ice", "rock", "fairy"]),
           'not-very-effective': new Set(["fire", "water", "electric", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
@@ -260,7 +260,7 @@ export const types = {
         {
           'super-effective': new Set(["fighting", "dragon", "dark"]),
           'not-very-effective': new Set(["fire", "poison", "steel"]),
-          'no-effect': new Set([''])
+          'no-effect': new Set()
         },
       'defense':
         {
