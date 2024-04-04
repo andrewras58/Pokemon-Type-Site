@@ -5,7 +5,7 @@ const TypeButtons = () => {
   return ( 
     <div className="type-buttons">
       {Object.keys(types).map(myType => (
-        <button>{myType}</button>
+        <button className={`type-button ${myType}`} id={myType}>{myType}</button>
       ))}
     </div>
   );
