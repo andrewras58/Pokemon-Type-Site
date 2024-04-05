@@ -16,6 +16,22 @@ const TypeButtons = ({type1, type2, setType1, setType2}) => {
     }
   }
 
+const TypeButtons = ({type1, type2, setType1, setType2}) => {
+  const handleClick = (e) => {
+    if (!type1){
+      setType1(e.target.id);
+    } else if (e.target.id === type1){
+      setType1(type2);
+      setType2(null);
+    } else if (!type2){
+      setType2(e.target.id);
+    } else if (e.target.id === type2){
+      setType2(null);
+    } else{
+      setType1(e.target.id);
+    }
+  }
+
   return ( 
     <div className="type-buttons">
       {Object.keys(types).map(myType => (
