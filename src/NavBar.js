@@ -1,7 +1,10 @@
-const NavBar = ({setOffense}) => {
+const NavBar = ({setOffense, setType2}) => {
   return ( 
     <nav>
-      <button onClick={() => setOffense(true)}>Offense</button>
+      <button onClick={() => {
+        setOffense(true);
+        setType2(null);
+      }}>Offense</button>
       <button onClick={() => setOffense(false)}>Defense</button>
     </nav>
   );

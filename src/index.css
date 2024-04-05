@@ -136,4 +136,9 @@
   width: 100%;
   text-align: center;
   justify-content: space-around;
+}
+
+.result > span{
+  display: flex;
+  flex-direction: column;
 } */

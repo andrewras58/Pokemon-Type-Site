@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBar from "./NavBar";
 import TypeButtons from "./TypeButtons";
+import TypeResult from "./TypeResult";
 
 const Home = () => {
   const [offense, setOffense] = useState(true);
@@ -9,10 +10,10 @@ const Home = () => {
 
   return ( 
     <div className="home">
-      <NavBar setOffense={setOffense} />
+      <NavBar setOffense={setOffense} setType2={setType2} />
       <h1>Pokemon - {offense ? "Offensive" : "Defensive"} Type Strengths and Weaknesses</h1>
-      <TypeButtons type1={type1} type2={type2} setType1={setType1} setType2={setType2}/>
-      
+      <TypeButtons type1={type1} type2={type2} offense={offense} setType1={setType1} setType2={setType2}/>
+      <TypeResult type1={type1} type2={type2} offense={offense} />
     </div>
   );
 }

@@ -1,18 +1,26 @@
 import { types } from "./type-data";
 
-const TypeButtons = ({type1, type2, setType1, setType2}) => {
+const TypeButtons = ({type1, type2, offense, setType1, setType2}) => {
   const handleClick = (e) => {
-    if (!type1){
-      setType1(e.target.id);
-    } else if (e.target.id === type1){
-      setType1(type2);
-      setType2(null);
-    } else if (!type2){
-      setType2(e.target.id);
-    } else if (e.target.id === type2){
-      setType2(null);
-    } else{
-      setType1(e.target.id);
+    if (offense){
+      if (type2){
+        setType2(null);
+      }
+      !type1 || e.target.id !== type1 ? setType1(e.target.id) : setType1(null);  //logic for offense (1 typing)
+    }
+    else{
+      if (!type1){
+        setType1(e.target.id);
+      } else if (e.target.id === type1){
+        setType1(type2);
+        setType2(null);
+      } else if (!type2){
+        setType2(e.target.id);
+      } else if (e.target.id === type2){
+        setType2(null);
+      } else{
+        setType1(e.target.id);
+      }
     }
   }
 

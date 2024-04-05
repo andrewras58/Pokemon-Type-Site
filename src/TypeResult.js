@@ -1,58 +1,54 @@
 import { types } from "./type-data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const TypeResult = ({type1, type2}) => {
-  const nullEmptySet = (set) => {
-    if (set.size === 0){
-      return null;
-    }
-    return set;
-  }
-
-  const [typeInfo, setTypeInfo] = useState({
+const TypeResult = ({type1, type2, offense}) => {
+  
+  const [offenseInfo, setOffenseInfo] = useState({
     superEffective: null,
+    neutral: null,
     notVeryEffective: null,
-    noEffect: null,
+    noEffect: null
+  });
+
+  const [defenseInfo, setDefenseInfo] = useState({
     weakTo: null,
+    neutral: null,
     resists: null,
     immuneTo: null
   })
 
-  setTimeout(() => {
-    if (!type1){
-      setTypeInfo({
-        superEffective: null,
-        notVeryEffective: null,
-        noEffect: null,
-        weakTo: null,
-        resists: null,
-        immuneTo: null
+  useEffect(() => {
+    if (offense && type1){
+      setOffenseInfo({
+        superEffective: types[type1]['offense']['super-effective'],
+        notVeryEffective: types[type1]['offense']['not-very-effective'],
+        neutral: types[type1]['offense']['neutral'],
+        noEffect: types[type1]['offense']['no-effect']
       });
-    } 
-    else if (type1 && !type2){
-      let offense = types[type1]['offense'];
-      let defense = types[type1]['defense'];
-      setTypeInfo({
-        superEffective: nullEmptySet(offense['super-effective']),
-        notVeryEffective: nullEmptySet(offense['not-very-effective']),
-        noEffect: nullEmptySet(offense['no-effect']),
-        weakTo: nullEmptySet(defense['weak-to']),
-        resists: nullEmptySet(defense['resists']),
-        immuneTo: nullEmptySet(defense['immune-to'])
-      });
-    } else{
-      console.log('type pairing feature does not exist... yet');
     }
-  }, 0);
+  }, [type1, offense]);
+
+  useEffect(() => {
+    if (!offense && type1){
+      setDefenseInfo({
+        weakTo: types[type1]['defense']['weak-to'],
+        neutral: types[type1]['defense']['neutral'],
+        resists: types[type1]['defense']['resists'],
+        immuneTo: types[type1]['defense']['immune-to']
+      });
+    }
+  }, [type1, type2, offense]);
 
   return ( 
     <div className="result">
-      {typeInfo.superEffective && <div className="super-effective">Super effective against:<div>{typeInfo.superEffective}</div></div>}
-      {typeInfo.notVeryEffective && <div className="not-very-effective">Not very effective against:<div>{typeInfo.notVeryEffective}</div></div>}
-      {typeInfo.noEffect && <div className="no-effect">No effect against:<div>{typeInfo.noEffect}</div></div>}
-      {typeInfo.weakTo && <div className="weak-to">Weak to:<div>{typeInfo.weakTo}</div></div>}
-      {typeInfo.resists && <div className="resits">Resists:<div>{typeInfo.resists}</div></div>}
-      {typeInfo.immuneTo && <div className="immune-to">Immune to:<div>{typeInfo.immuneTo}</div></div>}
+      {offense && <span>Super Effective: {offenseInfo.superEffective}</span>}
+      {offense && <span>Neutral: {offenseInfo.superEffective}</span>}
+      {offense && <span>Not Very Effective: {offenseInfo.notVeryEffective}</span>}
+      {offense && <span>No Effect: {offenseInfo.noEffect}</span>}
+      {!offense && <span>Weak to: {defenseInfo.weakTo}</span>}
+      {!offense && <span>Neutral: {defenseInfo.neutral}</span>}
+      {!offense && <span>Resists: {defenseInfo.resists}</span>}
+      {!offense && <span>Immune to: {defenseInfo.immuneTo}</span>}
     </div>
   );
 }
