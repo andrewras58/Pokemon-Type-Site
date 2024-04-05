@@ -76,58 +76,58 @@
   filter: brightness(80%);
 }
 
-.type-button.normal{
+.normal{
   background-color: var(--normal);
 }
-.type-button.fire{
+.fire{
   background-color: var(--fire);
 }
-.type-button.water{
+.water{
   background-color: var(--water);
 }
-.type-button.electric{
+.electric{
   background-color: var(--electric);
 }
-.type-button.grass{
+.grass{
   background-color: var(--grass);
 }
-.type-button.ice{
+.ice{
   background-color: var(--ice);
 }
-.type-button.fighting{
+.fighting{
   background-color: var(--fighting);
 }
-.type-button.poison{
+.poison{
   background-color: var(--poison);
 }
-.type-button.ground{
+.ground{
   background-color: var(--ground);
 }
-.type-button.flying{
+.flying{
   background-color: var(--flying);
 }
-.type-button.psychic{
+.psychic{
   background-color: var(--psychic);
 }
-.type-button.bug{
+.bug{
   background-color: var(--bug);
 }
-.type-button.rock{
+.rock{
   background-color: var(--rock);
 }
-.type-button.ghost{
+.ghost{
   background-color: var(--ghost);
 }
-.type-button.dragon{
+.dragon{
   background-color: var(--dragon);
 }
-.type-button.dark{
+.dark{
   background-color: var(--dark);
 }
-.type-button.steel{
+.steel{
   background-color: var(--steel);
 }
-.type-button.fairy{
+.fairy{
   background-color: var(--fairy);
 }
 
