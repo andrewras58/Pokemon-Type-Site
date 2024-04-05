@@ -51,7 +51,20 @@
   height: auto;
   padding: 10px 0;
   cursor: pointer;
+  margin: 3px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+}
+
+.type-pair{
+  margin-top: 20px;
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.type-pair > span{
   margin: 2px;
+  border-radius: 5px;
+  padding: 2px 5px;
 }
 
 .type-button:hover{
@@ -112,3 +125,10 @@
 .fairy{
   background-color: var(--fairy);
 }
+
+/* .result{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: space-around;
+} */
