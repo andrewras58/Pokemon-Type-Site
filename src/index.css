@@ -131,14 +131,9 @@
   background-color: var(--fairy);
 }
 
-/* .result{
+.result{
   display: flex;
   width: 100%;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-
-.result > span{
-  display: flex;
-  flex-direction: column;
-} */
