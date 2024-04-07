@@ -1,6 +1,6 @@
 const DisplayTypeResult = ({typeSet}) => {
   return ( 
-    <ul className="typeList">
+    <ul className="type-list">
       {Array.from(typeSet).map(type => (
         <li key={type} className={`type-result ${type}`}>{type}</li>
       ))}
