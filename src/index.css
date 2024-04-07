@@ -30,6 +30,10 @@
   flex-direction: column;
 }
 
+.home > h1{
+  text-align: center;
+}
+
 
 
 
@@ -152,4 +156,66 @@
 
 .type-list > li{
   width: 100px;
+}
+
+
+
+.type-button > span{
+  color: red;
+  background-color: white;
+  border-radius: 100%;
+  float: right;
+  margin-right: 10px;
+  width: 15px;
+  text-align: center;
+}
+
+@media (max-width: 600px){
+  nav > button{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 40px;
+    width: auto;
+  }
+
+  .home > h1{
+    font-size: 1.5rem;
+  }
+
+  .type-buttons{
+    width: 90%;
+  }
+
+  .type-button{
+    width: 50px;
+  }
+
+  .type-button.selected{
+    width: 100px;
+  }
+
+  .result > span{
+    width: 240px;
+  }
+
+  .type-list li{
+    width: 80px;
+    height: 25px;
+  }
+
+  .result {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .type-list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .type-pair{
+    margin-top: 10px;
+  }
 }
