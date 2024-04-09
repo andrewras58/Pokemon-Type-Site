@@ -30,16 +30,32 @@
   flex-direction: column;
 }
 
-.home > h1{
+.home > p{
   text-align: center;
 }
 
+.home > h1{
+  text-align: center;
+  font-size: 1.5rem;
+}
 
+.toggle{
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
 
+.toggle.activated{
+  background-color: #161612;
+  color: #dcdcdc;
+}
 
-
-
-
+.toggle.activated:hover{
+  filter: brightness(120%);
+}
 
 .type-buttons{
   width: 600px;
@@ -60,7 +76,7 @@
 }
 
 .type-pair{
-  margin-top: 20px;
+  margin-top: 15px;
   flex: 0 0 100%;
   text-align: center;
 }
@@ -137,9 +153,10 @@
 
 .result{
   display: flex;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .result > span{
@@ -170,17 +187,13 @@
   text-align: center;
 }
 
-@media (max-width: 600px){
-  nav > button{
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 40px;
-    width: auto;
+@media (max-width: 650px){
+  .home > p{
+    font-size: 0.75rem;
   }
 
   .home > h1{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .type-buttons{
@@ -188,7 +201,7 @@
   }
 
   .type-button{
-    width: 50px;
+    width: 30%;
   }
 
   .type-button.selected{
@@ -207,6 +220,7 @@
   .result {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
   }
 
   .type-list{
